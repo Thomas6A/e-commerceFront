@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import GetProducts from './Vue/Pages/GetProducts';
+import GetProductsController from './Controller/Product/GetProductsController';
 
 function App() {
   return <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<GetProducts />} />
+        <Route path="/" element={<GetProductsController />} />
       </Routes>
     </BrowserRouter>
   </>

@@ -6,7 +6,7 @@ const GetProductsController = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-
+        fetchProducts();
     }, [])
 
     const fetchProducts = async () => {
