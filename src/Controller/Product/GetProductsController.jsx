@@ -13,7 +13,6 @@ const GetProductsController = () => {
     const fetchProducts = async () => {
         try {
             let response = await ProductService.fetchProducts();
-            console.log(response.data);
             const listProducts = [];
             response.data.forEach(data => {
                 let product = new Product();

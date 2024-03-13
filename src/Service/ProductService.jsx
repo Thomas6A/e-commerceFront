@@ -1,9 +1,14 @@
 import axios from "axios";
 
-function fetchProducts(){
+function fetchProducts() {
     return axios.get("http://localhost:8085/products")
 }
 
-export default{
-    fetchProducts
+function fetchProductById(id) {
+    return axios.get("http://localhost:8085/products?id=" + id)
+}
+
+export default {
+    fetchProducts,
+    fetchProductById
 }

@@ -1,18 +1,18 @@
 import React from 'react';
 import CardProducts from '../Components/CardProducts';
+import { Col, Container, Row } from 'react-bootstrap';
 
 const GetProducts = (products) => {
     return (
-        <>
-            <div className='d-flex row justify-content-around'>
-
-                <div className='row'>
-                    {products.map(element => (
-                        <CardProducts product={element} />
-                    ))}
-                </div>
-            </div>
-        </>
+        <Container>
+            <Row className="justify-content-center">
+                {products.map(product => (
+                    <Col key={product.id} md={4}>
+                        <CardProducts product={product} />
+                    </Col>
+                ))}
+            </Row>
+        </Container>
     );
 };
 

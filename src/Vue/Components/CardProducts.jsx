@@ -1,22 +1,15 @@
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 
 const CardProducts = ({ product }) => {
 
     return (
         <>
-            <Card style={{ margin: '5%', marginLeft: '3%' }}>
+            <Card style={{ width: '18rem', margin: '1rem' }}>
+                <Card.Img variant="top" src="https://pbs.twimg.com/profile_images/1173267077/jmdoudoux_400x400.jpg" />
                 <Card.Body>
-                    <Card.Title style={{ marginLeft: '38%' }}>{product.id}</Card.Title>
-
-                    <Card.Text className='mb-5 mt-5'>
-                        {product.product_name}
-                    </Card.Text>
-                    <Card.Text className='mb-5 mt-5'>
-                        {product.product_name}
-                    </Card.Text>
-                    <Card.Text className='mb-5 mt-5'>
-                        {product.product_name}
-                    </Card.Text>
+                    <Card.Title>{product.product_name}</Card.Title>
+                    <Card.Text>{product.product_description}</Card.Text>
+                    <Button variant="primary">Voir produits</Button>
                 </Card.Body>
             </Card>
         </>
