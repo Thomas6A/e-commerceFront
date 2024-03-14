@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import CartService from './Service/CartService';
 import User from "./Model/User";
 import Cart from "./Model/Cart";
+import GetCart from './Controller/Cart/GetCart';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<GetProductsController />} />
+        <Route path="/Cart" element={<GetCart />} />
       </Routes>
     </BrowserRouter>
   </>
