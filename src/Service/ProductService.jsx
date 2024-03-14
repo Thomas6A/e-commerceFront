@@ -5,22 +5,22 @@ function fetchProducts() {
 }
 
 function fetchProductById(id) {
-    return axios.get("http://localhost:8085/products/"+id)
+    return axios.get("http://localhost:8085/products/" + id)
 }
 
-function deleteProductById(produit) {
+function deleteProduct(produit) {
     return axios({
-        method: 'post',
-        url: "http://localhost:8085/products/",
-        headers: {}, 
+        method: 'delete',
+        url: "http://localhost:8085/products",
+        headers: {},
         data: {
-            produit
+            "id": produit.id
         }
-      });
+    });
 }
 
 export default {
     fetchProducts,
     fetchProductById,
-    deleteProductById
+    deleteProduct
 }

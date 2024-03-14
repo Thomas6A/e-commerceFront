@@ -1,21 +1,13 @@
-import { useEffect } from "react";
 import ProductService from "../../Service/ProductService";
-import { useParams } from "react-router";
 
-const DeleteProductController = () => {
-    const {product} = useParams();
+const DeleteProductController = (product) => {
 
-    useEffect(() => {
-        deleteProduct();
-    }, [])
-
-    const deleteProduct = async () => {
-        try {
-            await ProductService.deleteProductById(product);
-        } catch (error) {
-            console.log("erreur" + error);
-        }
+    try {
+        ProductService.deleteProduct(product);
+    } catch (error) {
+        console.log("erreur" + error);
     }
 }
+
 
 export default DeleteProductController;
