@@ -5,7 +5,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 const GetProducts = (products) => {
     return (
         <Container>
-            {console.log(products.length)}
             <Row className="justify-content-center">
             {products.length !== 0 ? (
                     products.map(product => (

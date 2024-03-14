@@ -19,6 +19,20 @@ function deleteProduct(produit) {
     });
 }
 
+function createProduct(produit) {
+    return axios({
+        method: 'post',
+        url: "http://localhost:8085/products",
+        headers: {},
+        data: {
+            "product_name": produit.product_name,
+            "product_price": produit.product_price,
+            "product_description": produit.product_description,
+            "product_image": produit.product_image
+        }
+    });
+}
+
 export default {
     fetchProducts,
     fetchProductById,
