@@ -1,6 +1,12 @@
 import { Button, Card } from "react-bootstrap";
+import AddProductToCartController from "../../Controller/Cart/AddProductToCart";
 
 const CardProducts = ({ product }) => {
+
+    const handleAddClick = () => {
+        AddProductToCartController(product);
+        window.location.reload();
+    };
 
     return (
         <>
@@ -10,6 +16,7 @@ const CardProducts = ({ product }) => {
                     <Card.Title>{product.product_name}</Card.Title>
                     <Card.Text>{product.product_description}</Card.Text>
                     <Button variant="primary">Voir produits</Button>
+                    <Button onClick={handleAddClick} variant="primary" >Ajouter au panier</Button>
                 </Card.Body>
             </Card>
         </>
