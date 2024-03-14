@@ -9,7 +9,7 @@ const CardProducts = ({ product }) => {
                 <Card.Body>
                     <Card.Title>{product.product_name}</Card.Title>
                     <Card.Text>{product.product_description}</Card.Text>
-                    <Button variant="primary">Voir produits</Button>
+                    <Button variant="primary" href={"/"+product.id}>Voir produits</Button>
                 </Card.Body>
             </Card>
         </>
