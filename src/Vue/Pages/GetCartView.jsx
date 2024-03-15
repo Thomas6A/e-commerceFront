@@ -27,6 +27,7 @@ const GetCartView = (CartUser) => {
                 ))}
             </Row>
             <Button onClick={() => handleRemoveAllClick()} variant="primary" >Vider le panier</Button>
+            <Button onClick={() => handleRemoveAllClick()} variant="primary" >Valider le panier</Button>
         </Container>
     );
 };
