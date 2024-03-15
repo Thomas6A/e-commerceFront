@@ -7,6 +7,7 @@ import User from "./Model/User";
 import Cart from "./Model/Cart";
 import GetCart from './Controller/Cart/GetCart';
 import GetProductByIdController from './Controller/Product/GetProductByIdController';
+import FormProductController from './Controller/Product/FormProductController';
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/" element={<GetProductsController />} />
         <Route path="/Cart" element={<GetCart />} />
         <Route path={"/:id_product"} element={<GetProductByIdController />} />
+        <Route path={"/form/:product"} element={<FormProductController />} />
       </Routes>
     </BrowserRouter>
   </>
