@@ -1,5 +1,5 @@
 import { Button, Card } from "react-bootstrap";
-import AddProductToCartController from "../../Controller/Cart/AddProductToCart";
+import AddProductToCartController from "../../Controller/Cart/AddProductToCartController";
 import DeleteProductController from "../../Controller/Product/DeleteProductController";
 
 const CardProducts = ({ product }) => {

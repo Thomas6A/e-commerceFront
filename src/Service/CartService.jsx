@@ -8,7 +8,17 @@ function addProductToCart(cart){
     axios.put('http://localhost:8085/cartaddproduct',cart)
 }
 
+function removeProductToCart(cart){
+    axios.put('http://localhost:8085/cartdeleteproduct',cart)
+}
+
+function removeAllProductToCart(cart){
+    axios.put('http://localhost:8085/cartdeleteproduct',cart)
+}
+
 export default{
     getCartByUser,
-    addProductToCart
+    addProductToCart,
+    removeProductToCart,
+    removeAllProductToCart
 }

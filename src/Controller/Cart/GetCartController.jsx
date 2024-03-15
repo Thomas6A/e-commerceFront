@@ -1,7 +1,7 @@
 import Cart from "../../Model/Cart";
 import GetCartView from "../../Vue/Pages/GetCartView";
 
-const GetCart = () => {
+const GetCartController = () => {
     let cart = new Cart();
     cart = JSON.parse(localStorage.getItem("cart"));
     console.log(cart);
@@ -9,4 +9,4 @@ const GetCart = () => {
     return (GetCartView(cart))
 }
 
-export default GetCart;
+export default GetCartController;
