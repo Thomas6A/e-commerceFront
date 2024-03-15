@@ -24,6 +24,7 @@ const PostProduct = (productObj) => {
 
     const handleNavigate = () => {
         navigate("/");
+        window.location.reload();
 
     }
 
