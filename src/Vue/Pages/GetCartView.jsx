@@ -1,7 +1,14 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import CardProducts from "../Components/CardProducts";
+import RemoveProductToCartController from "../../Controller/Cart/RemoveProductToCart";
 
 const GetCartView = (CartUser) => {
+
+    const handleRemoveClick = (product) => {
+        RemoveProductToCartController(product);
+        window.location.reload();
+    };
+
     return (
         <Container>
             <Row className="justify-content-center">
@@ -9,6 +16,7 @@ const GetCartView = (CartUser) => {
                 {CartUser.products.map(product => (
                     <Col md={4}>
                         <CardProducts product={product} />
+                        <Button onClick={() => handleRemoveClick(product)} variant="primary" >Retirer du panier</Button>
                     </Col>
                 ))}
             </Row>
