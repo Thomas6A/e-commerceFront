@@ -1,21 +1,12 @@
-import { useEffect } from 'react';
 import ProductService from '../../Service/ProductService';
 
-const PostProductController = () => {
+const PostProductController = (formData) => {
 
-    useEffect(() => {
-        fetchProducts();
-    }, [])
-
-    const fetchProducts = async () => {
-        try {
-            await ProductService.createProduct();
-        } catch (error) {
-            console.log("erreur" + error);
-        }
+    try {
+        ProductService.createProduct(formData);
+    } catch (error) {
+        console.log("erreur" + error);
     }
-
-    return "/post";
 };
 
 export default PostProductController;

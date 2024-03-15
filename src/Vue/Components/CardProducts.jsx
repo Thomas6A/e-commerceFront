@@ -17,6 +17,7 @@ const CardProducts = ({ product }) => {
                     <Card.Text>{product.product_description}</Card.Text>
                     <Button variant="primary" href={"/" + product.id}>Voir produits</Button>
                     <Button variant="danger" onClick={handleDeleteClick}>Supprimer produit</Button>
+                    <Button variant="secondary" href={`/form/${encodeURIComponent(JSON.stringify(product))}`} >modifier produit</Button>
                 </Card.Body>
             </Card>
         </>

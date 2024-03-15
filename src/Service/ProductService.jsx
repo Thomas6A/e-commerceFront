@@ -25,6 +25,7 @@ function createProduct(produit) {
         url: "http://localhost:8085/products",
         headers: {},
         data: {
+            "id": produit.id,
             "product_name": produit.product_name,
             "product_price": produit.product_price,
             "product_description": produit.product_description,
@@ -36,5 +37,5 @@ function createProduct(produit) {
 export default {
     fetchProducts,
     fetchProductById,
-    deleteProduct
+    deleteProduct, createProduct
 }
