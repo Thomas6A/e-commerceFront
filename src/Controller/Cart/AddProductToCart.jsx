@@ -10,6 +10,7 @@ const AddProductToCartController = (product) => {
             products.push(product);
             cart.products = products;
             CartService.addProductToCart(cart);
+            localStorage.setItem("cart", JSON.stringify(cart))
         } catch (error) {
             console.log("erreur" + error);
         }

@@ -11,6 +11,7 @@ const RemoveProductToCartController = (product) => {
         cart.products = products;
         console.log(cart);
         CartService.removeProductToCart(cart);
+        localStorage.setItem("cart", JSON.stringify(cart))
     } catch (error) {
         console.log("erreur" + error);
     }

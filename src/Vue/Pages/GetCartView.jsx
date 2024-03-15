@@ -14,7 +14,7 @@ const GetCartView = (CartUser) => {
             <Row className="justify-content-center">
                 {console.log(CartUser)}
                 {CartUser.products.map(product => (
-                    <Col md={4}>
+                    <Col key={product.id} md={4}>
                         <CardProducts product={product} />
                         <Button onClick={() => handleRemoveClick(product)} variant="primary" >Retirer du panier</Button>
                     </Col>
