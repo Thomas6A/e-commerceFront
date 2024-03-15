@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import CartService from "../../Service/CartService";
 import Cart from "../../Model/Cart";
 

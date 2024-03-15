@@ -1,6 +1,6 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import CardProducts from "../Components/CardProducts";
-import RemoveProductToCartController from "../../Controller/Cart/RemoveProductToCart";
+import RemoveProductToCartController from "../../Controller/Cart/RemoveProductToCartController";
 
 const GetCartView = (CartUser) => {
 

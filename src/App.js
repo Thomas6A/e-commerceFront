@@ -5,8 +5,9 @@ import { useEffect, useState } from 'react';
 import CartService from './Service/CartService';
 import User from "./Model/User";
 import Cart from "./Model/Cart";
-import GetCart from './Controller/Cart/GetCart';
+import GetCart from './Controller/Cart/GetCartController';
 import GetProductByIdController from './Controller/Product/GetProductByIdController';
+import GetCartController from './Controller/Cart/GetCartController';
 
 function App() {
 
@@ -40,7 +41,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<GetProductsController />} />
-        <Route path="/Cart" element={<GetCart />} />
+        <Route path="/Cart" element={<GetCartController />} />
         <Route path={"/:id_product"} element={<GetProductByIdController />} />
       </Routes>
     </BrowserRouter>
