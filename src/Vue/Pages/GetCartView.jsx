@@ -1,11 +1,17 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import CardProducts from "../Components/CardProducts";
 import RemoveProductToCartController from "../../Controller/Cart/RemoveProductToCartController";
+import RemoveAllProductToCartController from "../../Controller/Cart/RemoveAllProductController";
 
 const GetCartView = (CartUser) => {
 
     const handleRemoveClick = (product) => {
         RemoveProductToCartController(product);
+        window.location.reload();
+    };
+
+    const handleRemoveAllClick = () => {
+        RemoveAllProductToCartController();
         window.location.reload();
     };
 
@@ -20,6 +26,7 @@ const GetCartView = (CartUser) => {
                     </Col>
                 ))}
             </Row>
+            <Button onClick={() => handleRemoveAllClick()} variant="primary" >Vider le panier</Button>
         </Container>
     );
 };

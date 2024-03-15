@@ -12,8 +12,13 @@ function removeProductToCart(cart){
     axios.put('http://localhost:8085/cartdeleteproduct',cart)
 }
 
+function removeAllProductToCart(cart){
+    axios.put('http://localhost:8085/cartdeleteproduct',cart)
+}
+
 export default{
     getCartByUser,
     addProductToCart,
-    removeProductToCart
+    removeProductToCart,
+    removeAllProductToCart
 }
