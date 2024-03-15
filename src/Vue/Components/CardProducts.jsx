@@ -17,7 +17,7 @@ const CardProducts = ({ product }) => {
     return (
         <>
             <Card style={{ width: '18rem', margin: '1rem' }}>
-                <Card.Img variant="top" src="https://pbs.twimg.com/profile_images/1173267077/jmdoudoux_400x400.jpg" />
+                <Card.Img variant="top" src={product.product_image} />
                 <Card.Body>
                     <Card.Title>{product.product_name}</Card.Title>
                     <Card.Text>{product.product_description}</Card.Text>
