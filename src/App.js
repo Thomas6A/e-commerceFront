@@ -9,6 +9,7 @@ import GetCart from './Controller/Cart/GetCartController';
 import GetProductByIdController from './Controller/Product/GetProductByIdController';
 import GetCartController from './Controller/Cart/GetCartController';
 import FormProductController from './Controller/Product/FormProductController';
+import Header from './Vue/Components/Header';
 
 function App() {
 
@@ -23,23 +24,24 @@ function App() {
 
   const fetchCart = async (user) => {
     try {
-        let response = await CartService.getCartByUser(user);
-        let cart = new Cart();
-        cart.setId(response.data.id)
-        cart.setUser(response.data.user)
-        cart.setProducts(response.data.products)
-        localStorage.setItem("cart", JSON.stringify(cart))
-        console.log(localStorage.getItem("cart").length);
-        console.log(JSON.stringify(cart));
+      let response = await CartService.getCartByUser(user);
+      let cart = new Cart();
+      cart.setId(response.data.id)
+      cart.setUser(response.data.user)
+      cart.setProducts(response.data.products)
+      localStorage.setItem("cart", JSON.stringify(cart))
+      console.log(localStorage.getItem("cart").length);
+      console.log(JSON.stringify(cart));
     } catch (error) {
-        console.log("erreur " + error);
+      console.log("erreur " + error);
     }
-}
+  }
 
 
 
   return <>
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<GetProductsController />} />
         <Route path="/Cart" element={<GetCartController />} />
