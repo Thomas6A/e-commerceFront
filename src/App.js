@@ -1,11 +1,10 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import GetProductsController from './Controller/Product/GetProductsController';
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import CartService from './Service/CartService';
 import User from "./Model/User";
 import Cart from "./Model/Cart";
-import GetCart from './Controller/Cart/GetCartController';
 import GetProductByIdController from './Controller/Product/GetProductByIdController';
 import GetCartController from './Controller/Cart/GetCartController';
 import FormProductController from './Controller/Product/FormProductController';
